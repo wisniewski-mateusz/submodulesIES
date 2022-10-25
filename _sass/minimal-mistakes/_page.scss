@@ -55,7 +55,9 @@ body {
     width: 100%;
     clear: both;
 
-    .page__content,
+    .page__content {
+      text-align: justify;
+    }
     .page__meta,
     .page__share {
       position: relative;
@@ -66,6 +68,10 @@ body {
       clear: both;
     }
   }
+}
+
+.sidebar__right {
+  text-align: left;
 }
 
 .page__title {
