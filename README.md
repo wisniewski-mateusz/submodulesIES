@@ -21,12 +21,19 @@ For further information, one ought to note that the submodule commit is stored t
 
 ## Application
 
+First, a submodule needs to be added in *main* which is practically the container. Such submodule can be added through the following command:
 
-`git submodule add <URL> / <path>`
+`git submodule add <URL><path>`
 
+Furthermore, one can observe that either a URL or path ought to be specified. The URL should be used in case the module repo is a remote repo. Moreover, the path should be specified in case the module repo is stored locally. When conducting such command, the `git status` command will indicate to a new *.gitmodules* file. In case of a locally specified path this illustrates the local config. This is helpful as the collaborators on the project can now use the mechanism of the *.gitmodules* file for which they can obtain the already defined submodules which they now can register in their own repositories. In practice, when working in the *main*, it is hard to keep track of the according logs of the submodule for which it is recommended to set up the following commnand:
+
+`git config --global status.submoduleSummary true` 
+
+It will allow us to observe the submodule status when conducting `git status` which was previously not possible. This makes it much easier for efficient and continuous utilization of submodules of the kind. Now, please note we have been working with 2 different repos but how exactly does the creation of a submodules represent in both the container repo and the submodule's repo? Well, the answer is simple, 
+
+
+`git clone - recursive <URL> [<path>]`
 
 ## Hazards
 
 ## Summary
-
-
