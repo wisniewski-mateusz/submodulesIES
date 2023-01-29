@@ -29,10 +29,27 @@ Furthermore, one can observe that either a URL or path ought to be specified. Th
 
 `git config --global status.submoduleSummary true` 
 
-It will allow us to observe the submodule status when conducting `git status` which was previously not possible. This makes it much easier for efficient and continuous utilization of submodules of the kind. Now, please note we have been working with 2 different repos but how exactly does the creation of a submodules represent in both the container repo and the submodule's repo? Well, the answer is simple, 
+It will allow us to observe the submodule status when conducting `git status` which was previously not possible. This makes it much easier for efficient and continuous utilization of submodules of the kind. Now, please note we have been working with 2 different repos but how exactly does the creation of a submodules represent in both the container repo and the submodule's repo? Well, the answer is simple, since the aim is to centralize the submodule(s) in the container repo, it is not stored spread over the working diretory but rather in the *.git* directory. Furthermore, for the case of the submodule repo, a reference is placed under the name of *gitdir*. Intuitively, by creating such branches it is just easier to find such logs of submodules rather than having to look for them all over the working directory. It allows for working in a more structured and efficient manner. 
+
+Having added a submodule in the repo, we now have to understand how one can reuse such a repo. Namely, when working as a team on a project, if a colleague attempts to clone the repository with the submodule, through the `git clone` command, the submodule will not be present. Such submodule can be retrieved through the *.gitmodules* which was talked about before. Particularly such submodule can be retrieved through the fllowing command:
+
+`git submodule init`
+
+This command allows the cloned repo to now be able to observe the submodule(s) in question, however, it is not yet fetched meaning that the relevant commits are missing. To obtain such commits one ought to manually retrieve them through:
+
+`git submodule update`
+
+Obviously, for practical purposes one normally just conducts the following command to obtain and update in one singular action:
+
+`git submodule update --init`
+
+Through such a command we managed to manually obtain the submodules in the cloned repo as well as retreive the relative contents. However, please note that such process is still inefficient aspecially when working on bigger projects where multiple submodules might be needed. Therefore, we can optimalize such processes through automatically updating and retrieving the submodule when cloning a repo through the *--recursive* option in the following command:
+
+`git clone --recursive`
+
+However, please note that when conducting such a command the `git status` command will illustrate that the *HEAD* is detached.
 
 
-`git clone - recursive <URL> [<path>]`
 
 ## Hazards
 
