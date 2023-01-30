@@ -142,11 +142,42 @@ In summary, this wiki illustrates a brief overview of the working of submodules.
 
 Here all the helpful commands described in this wiki are listed. Check the table below.
 
+
+
+
+| Command                       | Purpose                                       |
+|-------------------------------|-----------------------------------------------|
+| `git submodule add <URL><path>` | Add the submodule to the container repository |
+| `git submodule update`          | Update the submodule by the latest commits    |
+| `git submodule init` | Initialize the submodule using the credits from the *.gitmodules* file |
+| `git submodule update --init` | Combine commands submodule init and submodule update |
+| `git clone - recursive <URL> [<path>]` | Clone the repository with all nested submodules |
+| `git submodule deinit` | Remove the submodule temporarily |
+| `git rm <path-to-submodule>` | Remove the submodule permanently |
+| `git config --global status.submoduleSummary true` | Allow to observe the submodule status with `git status` |
+| `git config --global alias.spush 'push --recurse-submodules=on-demand'` | Allow to push simultaneously commits from container repo and submodule |
+
 ## 8. Exercises
+
+Here are a few exercises which can help you practice newly acquired skills. Good luck!
 
 ### 8.1. Ex. 1
 
+Fork the repositories: [submodulesIES_submodule](https://github.com/wisniewski-mateusz/submodulesIES_submodule) and [submodulesIES_container](https://github.com/wisniewski-mateusz/submodulesIES_container). In the `submodulesIES_submodule` repository a python script with the definition of the function `is_it_prime` can be found. This function checks whether the given number is a prime number. Whereas the `submodulesIES_container` repository contains a python script which requires the definition of this function in order to work properly. Your task is to add `submodulesIES_submodule` as a submodule of `submodulesIES_container` and assure yourself that `main.py` from `submodulesIES_container` works as it should.
+
 ### 8.2. Ex. 2
+
+You realized that function `is_it_prime` from the `submodulesIES_submodule` repository is not defined optimally. Why, while having a number $n$ and trying to check if it is a prime number, one would consider all the numbers $\\{2, ..., n-1\\}$ as potential factors instead of taking $\\{2, ..., \lfloor\sqrt{n}\rfloor\\}$? Considering an example of the huge prime number such as 7,263,497,693,459,281, this approach would be a significant optimization since $\lfloor\sqrt{n}\rfloor=85,226,156$, so we have got 7,263,497,608,233,125 fewer numbers to check. Your task is to update the `submodulesIES_submodule` repository by replacing the `is_it_prime` definition into:
+
+```py
+
+```
+
+After that, you should pull those changes to the `submodulesIES_container` repository and assure yourself that everything works as it should.
+
+### 8.3. Ex. 3
+
+This time you realized that it was a form over substance to have those two repositories to obtain such functionality. Firstly, your task is to temporarily delete the submodule from `submodulesIES_container` and make `main.py` workable without it. After that, you should initialize the submodule back and delete it permanently. Of course, the `main.py` should still work as before.
 
 ---
 ---
