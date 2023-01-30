@@ -10,7 +10,7 @@ toc_sticky: true
 
 <span style="font-size:xx-large;">**How to work with submodules?**</span>
 
-This site contains all the necessary information (available till 26th October) about Git submodules. It was based mostly on the [Git Pro - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) section from `Git Pro` book. It is assumed that the reader knows basics of Git. If not, [here](https://martinhronec.github.io/JEM224/) is an introduction.
+This site contains all the necessary information (available till 30th January 2023) about Git submodules. It was based mostly on the [Git Pro - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) section from `Git Pro` book. It is assumed that the reader knows basics of Git. If not, [here](https://martinhronec.github.io/JEM224/) is an introduction.
 
 ## 1. "Real-life" example
 
