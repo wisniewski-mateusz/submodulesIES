@@ -159,7 +159,7 @@ Here all the helpful commands described in this wiki are listed. Check the table
 
 ## 8. Exercises
 
-Here are a few exercises which can help you practice newly acquired skills. Good luck!
+Here are a few exercises which can help you practice newly acquired skills. Unfortunately, those exercises require basic python knowledge. Good luck!
 
 ### 8.1. Ex. 1
 
