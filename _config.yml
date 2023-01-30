@@ -20,7 +20,7 @@ title                    : "Submodules"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : <a href="https://github.com/wisniewski-mateusz" rel="nofollow">Mateusz Wiśniewski</a> & <a href="https://github.com/S-Belon" rel="nofollow">Sander Belon</a>
-description              : "An amazing website."
+description              : "Website about the Git Submodules tool"
 url                      : "https://wisniewski-mateusz.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "wisniewski-mateusz/submodulesIES"
