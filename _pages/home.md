@@ -167,7 +167,7 @@ Fork the repositories: [submodulesIES_submodule](https://github.com/wisniewski-m
 
 ### 8.2. Ex. 2
 
-You realized that function `is_it_prime` from the `submodulesIES_submodule` repository is not defined optimally. Why, while having a number $n$ and trying to check if it is a prime number, one would consider all the numbers $\\{2, ..., n-1\\}$ as potential factors instead of taking $\\{2, ..., \lfloor\sqrt{n}\rfloor\\}$? Considering an example of the huge prime number such as 7,263,497,693,459,281, this approach would be a significant optimization since $\lfloor\sqrt{n}\rfloor=85,226,156$, so we have got 7,263,497,608,233,125 fewer numbers to check. Your task is to update the `submodulesIES_submodule` repository by replacing the `is_it_prime` definition into:
+You realized that function `is_it_prime` from the `submodulesIES_submodule` repository is not defined optimally. Why, while having a number $n$ and trying to check if it is a prime number, one would consider all the numbers $\\{2, ..., n-1\\}$ as potential factors instead of taking $\\{2, ..., \lfloor\sqrt{n}\rfloor\\}$? Considering an example of the huge prime number such as $7,263,497,693,459,281$, this approach would be a significant optimization since $\lfloor\sqrt{n}\rfloor=85,226,156$, so we have got $7,263,497,608,233,125$ fewer numbers to check. Your task is to update the `submodulesIES_submodule` repository by replacing the `is_it_prime` definition into:
 
 ```py
 def is_it_prime(n: int) -> bool:
